@@ -13,6 +13,19 @@
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-left">
+                <a href="tel:+49821811324"><i class="fas fa-phone"></i> +49 821 811324</a>
+                <a href="mailto:kribelbauer@t-online.de"><i class="fas fa-envelope"></i> kribelbauer@t-online.de</a>
+            </div>
+            <div class="topbar-right">
+                <span><i class="fas fa-clock"></i> Mo-Do 8:00-17:00 | Fr 8:00-13:00</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
@@ -37,31 +50,56 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="hero-slide active" style="background-image: url('images/slide1.jpg')"></div>
-            <div class="hero-slide" style="background-image: url('images/slide2.jpg')"></div>
-            <div class="hero-slide" style="background-image: url('images/slide3.jpg')"></div>
-            <div class="hero-slide" style="background-image: url('images/slide4.jpg')"></div>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge" data-animate="fade-up">Seit 1952 in Augsburg</div>
-            <h1 data-animate="fade-up" data-delay="100">
-                Ihr Maler &<br>
-                <span class="text-accent">Tapezierer</span> in Augsburg
-            </h1>
-            <p class="hero-subtitle" data-animate="fade-up" data-delay="200">Gestalten, pflegen, schützen. Wir kümmern uns bestens um Ihre Wände, Decken, Böden und Fassaden.</p>
-            <div class="hero-actions" data-animate="fade-up" data-delay="300">
-                <a href="#leistungen" class="btn btn-primary">Unsere Leistungen</a>
-                <a href="#kontakt" class="btn btn-outline">Kontakt aufnehmen</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <a href="#unternehmen">
-                <div class="scroll-indicator">
-                    <div class="scroll-dot"></div>
+        <div class="hero-split">
+            <div class="hero-left">
+                <div class="hero-left-inner">
+                    <div class="hero-badge" data-animate="fade-up">
+                        <span class="badge-line"></span>
+                        Seit 1952 in Augsburg
+                    </div>
+                    <h1 data-animate="fade-up" data-delay="100">
+                        Gestalten.<br>
+                        Pflegen.<br>
+                        <span class="text-accent">Schützen.</span>
+                    </h1>
+                    <p class="hero-subtitle" data-animate="fade-up" data-delay="200">Wir kümmern uns bestens um Ihre Wände, Decken, Böden und Fassaden. Ihr Meisterbetrieb für Malerarbeiten in Augsburg.</p>
+                    <div class="hero-actions" data-animate="fade-up" data-delay="300">
+                        <a href="#leistungen" class="btn btn-primary"><i class="fas fa-paint-roller"></i> Unsere Leistungen</a>
+                        <a href="#kontakt" class="btn btn-dark">Kontakt aufnehmen <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="hero-trust" data-animate="fade-up" data-delay="400">
+                        <div class="trust-item">
+                            <i class="fas fa-medal"></i>
+                            <span>Meisterbetrieb</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-users"></i>
+                            <span>15 Mitarbeiter</span>
+                        </div>
+                        <div class="trust-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Innungsmitglied</span>
+                        </div>
+                    </div>
                 </div>
-            </a>
+            </div>
+            <div class="hero-right">
+                <div class="hero-slider">
+                    <div class="hero-slide active" style="background-image: url('images/slide1.jpg')"></div>
+                    <div class="hero-slide" style="background-image: url('images/slide2.jpg')"></div>
+                    <div class="hero-slide" style="background-image: url('images/slide3.jpg')"></div>
+                    <div class="hero-slide" style="background-image: url('images/slide4.jpg')"></div>
+                </div>
+                <div class="slide-counter">
+                    <span class="slide-current">01</span>
+                    <span class="slide-divider"></span>
+                    <span class="slide-total">04</span>
+                </div>
+                <div class="slide-nav">
+                    <button class="slide-btn slide-prev" aria-label="Vorheriges Bild"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slide-btn slide-next" aria-label="Nächstes Bild"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
         </div>
     </section>
 

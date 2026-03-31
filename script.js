@@ -53,18 +53,48 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- Hero Slideshow ----
+    // ---- Hero Slideshow with Controls ----
     const slides = document.querySelectorAll('.hero-slide');
+    const slideCurrentEl = document.querySelector('.slide-current');
+    const prevBtn = document.querySelector('.slide-prev');
+    const nextBtn = document.querySelector('.slide-next');
     let currentSlide = 0;
+    let slideInterval;
 
-    function nextSlide() {
+    function updateCounter() {
+        if (slideCurrentEl) {
+            slideCurrentEl.textContent = String(currentSlide + 1).padStart(2, '0');
+        }
+    }
+
+    function goToSlide(index) {
         slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
+        currentSlide = (index + slides.length) % slides.length;
         slides[currentSlide].classList.add('active');
+        updateCounter();
+    }
+
+    function startAutoSlide() {
+        slideInterval = setInterval(() => goToSlide(currentSlide + 1), 5000);
     }
 
     if (slides.length > 1) {
-        setInterval(nextSlide, 6000);
+        startAutoSlide();
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                goToSlide(currentSlide - 1);
+                startAutoSlide();
+            });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                goToSlide(currentSlide + 1);
+                startAutoSlide();
+            });
+        }
     }
 
     // ---- Scroll Animations (Intersection Observer) ----
