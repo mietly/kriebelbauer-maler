@@ -119,12 +119,10 @@ a {
     height: 50px;
     width: auto;
     transition: all var(--transition);
-    filter: brightness(0) invert(1);
 }
 
 .navbar.scrolled .nav-logo-img {
     height: 44px;
-    filter: none;
 }
 
 .nav-menu {
